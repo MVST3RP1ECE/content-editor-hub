@@ -47,7 +47,7 @@ npm run build
 ## Директории в проекте
 
 ```
-src/
+docs/
 ├── index.html              # Главная страница
 ├── index.js               # Главный исполняемый файл
 ├── styles.css             # Стили
