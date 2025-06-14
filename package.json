@@ -1,12 +1,15 @@
 {
-  "name": "tinymce-webcomp-editor",
+  "name": "content-editor-hub",
   "version": "1.0.0",
   "description": "WYSIWYG редактор на базе TinyMCE",
   "main": "docs/bundle.js",
+  "homepage": "https://yourusername.github.io/content-editor-hub",
   "scripts": {
     "build": "webpack --mode=production",
     "dev": "webpack serve --mode=development",
-    "start": "webpack serve --mode=development --open"
+    "start": "webpack serve --mode=development --open",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d docs"
   },
   "devDependencies": {
     "@babel/core": "^7.22.0",

@@ -1,8 +1,31 @@
 # Dependencies
 node_modules/
+package-lock.json
+
+# Production
+docs/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Environment
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
 # Build output
 # dist/
@@ -66,14 +89,6 @@ typings/
 # Yarn Integrity file
 .yarn-integrity
 
-# dotenv environment variables file
-.env
-.env.test
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
 # parcel-bundler cache (https://parceljs.org/)
 .cache
 .parcel-cache
@@ -96,25 +111,8 @@ public
 tmp/
 temp/
 
-# Logs
-logs
-*.log
-
 # Editor directories and files
-.vscode/
-.idea/
-*.swp
-*.swo
 *~
-
-# OS generated files
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
 
 # Webpack
 .webpack/

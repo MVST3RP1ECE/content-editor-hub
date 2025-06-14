@@ -7,7 +7,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'docs'),
     filename: 'bundle.js',
-    publicPath: '/',
+    publicPath: '/content-editor-hub/',
     clean: true,
   },
   devServer: {
@@ -16,6 +16,7 @@ module.exports = {
     },
     port: 8080,
     hot: true,
+    historyApiFallback: true,
   },
   module: {
     rules: [
@@ -38,7 +39,8 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
-      title: 'TinyMCE Web Components Editor',
+      title: 'Content Editor Hub',
+      favicon: './src/favicon.ico',
     }),
     new CopyWebpackPlugin({
       patterns: [
