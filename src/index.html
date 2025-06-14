@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TinyMCE Web Components Editor</title>
+</head>
+<body>
+    <div class="app-container">
+        <div class="main-area">
+            <div class="toolbar">
+                <button id="insertBtn" class="insert-btn">Insert</button>
+            </div>
+            <div class="editor-container">
+                <textarea id="editor">There is some text that user typed manually</textarea>
+            </div>
+        </div>
+        
+        <div class="sidebar">
+            <h3>Templates</h3>
+            <div class="templates-list" id="templatesList">
+                <!-- Шаблоны -->
+            </div>
+            <div class="template-controls">
+                <button id="removeTemplate" class="control-btn remove-btn">-</button>
+                <button id="addTemplate" class="control-btn add-btn">+</button>
+            </div>
+            
+            <div class="edit-section">
+                <h4>Edit template</h4>
+                <input type="text" id="editTemplateInput" class="edit-input" />
+            </div>
+        </div>
+    </div>
+    
+    <!-- Веб-компоненты -->
+</body>
+</html> 
