@@ -3,15 +3,16 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  entry: './docs/index.js',
+  entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'docs'),
     filename: 'bundle.js',
+    publicPath: '/',
     clean: true,
   },
   devServer: {
     static: {
-      directory: path.join(__dirname, 'dist'),
+      directory: path.join(__dirname, 'docs'),
     },
     port: 8080,
     hot: true,
@@ -36,30 +37,30 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './docs/index.html',
+      template: './src/index.html',
       title: 'TinyMCE Web Components Editor',
     }),
     new CopyWebpackPlugin({
       patterns: [
         {
           from: path.resolve(__dirname, 'node_modules/tinymce/skins'),
-          to: path.resolve(__dirname, 'dist/skins'),
+          to: path.resolve(__dirname, 'docs/skins'),
         },
         {
           from: path.resolve(__dirname, 'node_modules/tinymce/themes'),
-          to: path.resolve(__dirname, 'dist/themes'),
+          to: path.resolve(__dirname, 'docs/themes'),
         },
         {
           from: path.resolve(__dirname, 'node_modules/tinymce/plugins'),
-          to: path.resolve(__dirname, 'dist/plugins'),
+          to: path.resolve(__dirname, 'docs/plugins'),
         },
         {
           from: path.resolve(__dirname, 'node_modules/tinymce/models'),
-          to: path.resolve(__dirname, 'dist/models'),
+          to: path.resolve(__dirname, 'docs/models'),
         },
         {
           from: path.resolve(__dirname, 'node_modules/tinymce/icons'),
-          to: path.resolve(__dirname, 'dist/icons'),
+          to: path.resolve(__dirname, 'docs/icons'),
         },
       ],
     }),
